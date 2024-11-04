@@ -11,12 +11,30 @@ const transactionSchema = new Schema({
   },
   walletTo: {
     type: Schema.Types.ObjectId,
-    ref: "Participants",
     required: true,
   },
-  speciesFound: {
-    type: Schema.Types.ObjectId,
-    ref: "SpeciesFound",
+  amount: {
+    type: Schema.Types.Number,
+    required: true,
+  },
+  type: {
+    type: Schema.Types.String,
+    required:true,
+  },
+  status: {
+    type: Schema.Types.String,
+    required: true,
+  },
+  createdAt: {
+    type: Schema.Types.Date,
+    required: true,
+  },
+  currency: {
+    type: Schema.Types.String,
+    required: true,
+  },
+  details: {
+    type: Schema.Types.String,
     required: true,
   },
 });
